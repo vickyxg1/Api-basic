@@ -7,8 +7,12 @@ app.use(cors())
 
 app.get('/', async (req, res) => {
 
-  const response = await axios('https://jsonplaceholder.typecode.com/users')
+  try {
+    const response = await axios('https://jsonplaceholder.typecode.com/users')
 
-  return res.json(data)
+    return res.json(data)
+  } catch (error) {
+    console.error(error)
+  }
 
   app.listen('6666')
