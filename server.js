@@ -14,5 +14,5 @@ app.get('/', async (req, res) => {
   } catch (error) {
     console.error(error)
   }
-
-  app.listen('6666')
+})
+app.listen('6666')
