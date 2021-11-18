@@ -1,14 +1,14 @@
 const cors = require('cors')
 const express = require('express')
 const app = express()
+const axios = require('axios')
 
 app.use(cors())
 
-app.get('/', (req, res) => {
-  return res.json([
-    { name: 'vicky' },
-    { name: 'max' }
-  ])
-})
+app.get('/', async (req, res) => {
 
-app.listen('6666')
+  const response = await axios('https://jsonplaceholder.typecode.com/users')
+
+  return res.json(data)
+
+  app.listen('6666')
